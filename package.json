@@ -1,0 +1,50 @@
+{
+    "name": "lauant-theme",
+    "version": "1.0.0",
+    "description": "Lauant Theme",
+    "scripts": {
+        "build": "concurrently \"webpack\" \"gulp\"",
+        "prod": "webpack --mode production --config ./webpack.prod.js && gulp",
+        "dev": "webpack --mode development --watch"
+    },
+    "repository": "",
+    "author": "Lauant",
+    "license": "private",
+    "devDependencies": {
+        "@svgr/webpack": "^5.5.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "compression-webpack-plugin": "^7.1.2",
+        "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
+        "foundation-sites": "^6.6.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-copy": "^4.0.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglifyes": "^0.2.1",
+        "lax.js": "^2.0.3",
+        "lodash": "^4.17.20",
+        "mini-css-extract-plugin": "^1.3.5",
+        "node-sass": "^5.0.0",
+        "terser-webpack-plugin": "^5.1.1",
+        "webpack-cli": "^4.5.0"
+    },
+    "dependencies": {
+        "@babel/core": "^7.12.13",
+        "animate.css": "^4.1.1",
+        "babel-loader": "^8.2.2",
+        "browser-sync": "^2.26.14",
+        "clean-css-cli": "^4.3.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-terser": "^2.0.1",
+        "jquery": "^3.5.1",
+        "sass": "^1.32.6",
+        "sass-loader": "^11.0.0",
+        "terser": "5.6.0-beta",
+        "webpack": "^5.20.2",
+        "webpack-cli": "^4.5.0",
+        "webpack-stream": "^6.1.2"
+    }
+}

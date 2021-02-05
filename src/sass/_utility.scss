@@ -1,0 +1,135 @@
+.abs{
+    position: absolute;
+}
+.rel{
+    position: relative;
+}
+.block{
+    display: block;
+}
+.iblock{
+    display: inline-block;
+}
+.hide{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.flex.right{
+    justify-content: flex-end;
+}
+.max-600{
+    max-width: 600px;
+}
+.max-1700{
+    max-width: 1700px;
+}
+.max-1200{
+    max-width: 1200px;
+}
+
+.spread{
+    justify-content: space-evenly;
+}
+.center{
+    margin: 0 auto;
+}
+.bottom{
+    align-items: flex-end;
+}
+.center-row{
+    justify-content: center;
+}
+.center-col{
+    align-items: center;
+}
+.center-all{
+    justify-content: center;
+    align-items: center;
+}
+.txt-shadow{
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.75);
+}
+.bg-img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hover{
+    cursor: pointer;
+}
+.mtd-divider{
+    max-width: 1150px;
+    height: 2px;
+    background: orange;
+    margin: 30px auto 100px auto;
+}
+
+@mixin mtd-button {
+    text-transform: uppercase;
+    padding: 13px 26px;
+    color: white;
+	border-radius: 8px;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+	font-family: "Lora";
+	background: orange;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+	&:hover{
+		color: white;
+        background: brown;
+        cursor: pointer;
+	}
+}
+
+.mtd-btn,.wp-block-button a.wp-block-button__link{
+    @include mtd-button;
+}
+
+.wp-block-separator {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.btn-grad {
+    font-size: 17px;
+    // line-height: 20px;
+    font-family: "Lora";
+    font-weight: bold;
+    text-transform: uppercase;
+    width: auto;
+    padding: 8px 25px;
+    // width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    letter-spacing: 2px;
+    background-image: linear-gradient(90deg, green 0%, $link-hover-color 100%);
+    &:before {
+        color: white;
+        border-radius: 50px;
+        z-index: -2;
+        background-image: linear-gradient(90deg, $link-hover-color 0%, $link-hover-color 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        transition: opacity 0.45s;
+    }
+    &:hover{
+        &:before {
+            opacity: 1;
+        }
+    }
+}
